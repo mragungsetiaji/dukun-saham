@@ -25,7 +25,7 @@ class Interpolation(object):
         self.cols = cols
         self.dir_path = dir_path
 
-    def interpolate(self,):
+    def interpolate(self):
         
         for col in self.cols:
             df[col] = df[col].interpolate('spline', order=2)
