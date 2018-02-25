@@ -25,7 +25,7 @@ class Interpolation(object):
         self.cols = cols
         self.dir_path = dir_path
 
-    def interpolate(self):
+    def interpolate(self,):
         
         for col in self.cols:
             df[col] = df[col].interpolate('spline', order=2)
@@ -37,13 +37,14 @@ class Interpolation(object):
         files = os.listdir(self.dir_path)
         for file_name in files:
             dataframe = pd.read_csv(os.path.join(self.dir_path, file_name))
-            dataframe = interpolate(dataframe, \
-                ['high', 'open', 'low', 'close', 'volume'. 'adj_close'])
+            dataframe = interpolate(dataframe, ['high', 'open', 
+                                                'low', 'close', 
+                                                'volume'. 'adj_close'])
             print dataframe
 
             break
 
-            
+
 
             
             
