@@ -22,7 +22,7 @@ def main(dir_path, output_dir):
     maxdelta = 30
 
     delta = range(8, maxdelta)
-    print('Delta days accounted: ', max(delta))
+    print('Delta days accounted:  ', max(delta))
 
     for file_name in files:
         try:
