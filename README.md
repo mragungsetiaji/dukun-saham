@@ -5,12 +5,13 @@ Menguji beberapa teknik forecasting berbeda untuk memprekdiksi harga saham berda
 
 ## Setup
 ```
-    $ workon myvirtualenv                                  [Optional]
-	$ pip install -r requirements.txt
-	$ python scripts/Algorithms/regression_models.py <input-dir> <output-dir>
+$ workon myvirtualenv
+[Optional]
+$ pip install -r requirements.txt
+$ python scripts/Algorithms/regression_models.py <input-dir> <output-dir>
 ```
 
-Download the Dataset needed for running the code from [here](https://drive.google.com/open?id=0B2lCmt16L_r3SUtrTjBlRHk3d1E).
+Download dataset yang dibutuhkan untuk run code dari [sini](https://drive.google.com/open?id=0B2lCmt16L_r3SUtrTjBlRHk3d1E).
 
 ### Methodology 
 1. Preprocessing and Cleaning
