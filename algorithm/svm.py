@@ -1,3 +1,4 @@
+#! /usr/bin/python
 '''
     Running Support Vector Regression Model.
 '''
@@ -16,6 +17,7 @@ from sklearn.cross_validation import train_test_split
 def convert_to_integer(dt_time):
     return 10000*dt_time.year + 1000*dt_time.month + dt_time.day
 
+
 def preprocess(file_dataframe, cols=['date', 'open']):
     
     if 'date' in cols:
@@ -26,6 +28,7 @@ def preprocess(file_dataframe, cols=['date', 'open']):
 
     return X, y
 
+
 def svm(file_dataframe, test_size=0.2, cols=['date', 'open']):
     '''
         Run Logistic Regression
@@ -35,6 +38,7 @@ def svm(file_dataframe, test_size=0.2, cols=['date', 'open']):
 
     if 'date' in file_dataframe:
         file_dataframe['new_col'] = pd.to_datetime(file_dataframe['date']).astype(datetime)
+        #file_dataframe['date'] = pd.to_datetime(file_dataframe['date'])
         file_dataframe['new_col'].apply(lambda dt_time:10000*dt_time.year + 1000*dt_time.month + dt_time.day).astype(int)
 
     print(file_dataframe['new_col'])
