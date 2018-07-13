@@ -2,10 +2,10 @@ import os, sys, csv
 import math
 
 def roundup(var):
-	return float(format(var, '.6f'))
+    return float(format(var, '.6f'))
 
 def main(dir_path, output_dir):
-	files = os.listdir(dir_path)
+    files = os.listdir(dir_path)
 	for file_name in files:
 		with open( os.path.join(dir_path, file_name), 'r') as textfile:
 			new_file = open(os.path.join(output_dir, file_name), 'w+')
